@@ -27,7 +27,9 @@ public class List {
 		System.out.println("가입 날짜를 입력하세요 예시)1999-08-04");
 		String membership_start=scan.next();
 		
-		membershipList.add(new Membership(membership_start, null, membership_start, null));
+		membershipList.add(new Membership(i, membership_start, null, membership_start, null));
+		
+		System.out.println("회원가입이 정상적으로 진행 되었습니다.");
 		}
 		File file = new File("src/projectIo/membersOnly.txt");
 		try(ObjectOutputStream oout

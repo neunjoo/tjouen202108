@@ -9,16 +9,24 @@ public class Membership implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1243761536264114074L;
+	private int id;
 	private String name;
 	private LocalDate birthDate;
 	private String address;
 	private LocalDate membership_start;
-	public Membership(String name, LocalDate birthDate, String address, LocalDate membership_start) {
+	public Membership(int id, String name, LocalDate birthDate, String address, LocalDate membership_start) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
 		this.address = address;
 		this.membership_start = membership_start;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -29,7 +37,7 @@ public class Membership implements Serializable {
 	public LocalDate getBirthDate() {
 		return birthDate;
 	}
-	public void setAge(LocalDate birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 	public String getAddress() {
@@ -47,11 +55,6 @@ public class Membership implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	@Override
-	public String toString() {
-		return "Membership [name=" + name + ", birthDate=" + birthDate + ", address=" + address + ", membership_start="
-				+ membership_start + "]";
-	}
-
+	
 
 }
